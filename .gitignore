@@ -1,0 +1,5 @@
+build/
+release/
+release-contents/
+__pycache__/
+*.log

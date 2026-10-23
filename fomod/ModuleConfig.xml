@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Survival Accord</moduleName>
+
+  <requiredInstallFiles>
+    <folder source="Core" destination="" />
+    <file source="LICENSE.txt" destination="LICENSE.txt" />
+    <file source="NOTICE.txt" destination="NOTICE.txt" />
+    <file source="LICENSE-GPL-3.0.txt" destination="LICENSE-GPL-3.0.txt" />
+  </requiredInstallFiles>
+
+  <installSteps order="Explicit">
+    <installStep name="Survival">
+      <optionalFileGroups order="Explicit">
+        <group name="Which survival mods should Survival Accord connect?" type="SelectAny">
+          <plugins order="Explicit">
+
+            <plugin name="Last Seed 2026 - Hunger, Fatigue and Camping">
+              <description>Replaces Last Seed's Hunger, Fatigue and food-eating scripts with versions that understand Firmament: Pathfinder, Dungeon Delver and Camper slow Hunger and Fatigue, Field Rations makes food restore more Hunger, and Camper lets you sleep Well Rested outdoors. Without Firmament these scripts behave like Last Seed 2026's own.
+
+Chosen for you when Last Seed (LastSeed.esp) is in your load order. Install this mod after Last Seed 2026 so its scripts win.</description>
+              <files>
+                <folder source="Last Seed" destination="" />
+              </files>
+              <typeDescriptor>
+                <dependencyType>
+                  <defaultType name="Optional" />
+                  <patterns>
+                    <pattern>
+                      <dependencies>
+                        <fileDependency file="LastSeed.esp" state="Active" />
+                      </dependencies>
+                      <type name="Recommended" />
+                    </pattern>
+                  </patterns>
+                </dependencyType>
+              </typeDescriptor>
+            </plugin>
+
+            <plugin name="Frostfall 2026 - Cold exposure">
+              <description>Replaces Frostfall's Exposure script with a version where Firmament's Resilience perk and Fortify Exploration equipment slow the cold Exposure gain. Warming and recovery are not changed. Without Firmament it behaves like Frostfall 2026's own.
+
+Chosen for you when Frostfall (Frostfall.esp) is in your load order. Install this mod after Frostfall 2026 so its script wins.</description>
+              <files>
+                <folder source="Frostfall" destination="" />
+              </files>
+              <typeDescriptor>
+                <dependencyType>
+                  <defaultType name="Optional" />
+                  <patterns>
+                    <pattern>
+                      <dependencies>
+                        <fileDependency file="Frostfall.esp" state="Active" />
+                      </dependencies>
+                      <type name="Recommended" />
+                    </pattern>
+                  </patterns>
+                </dependencyType>
+              </typeDescriptor>
+            </plugin>
+
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+</config>
