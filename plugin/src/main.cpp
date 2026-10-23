@@ -113,6 +113,15 @@ namespace
 		if (g_hunterborn) {
 			SKSE::log::info("Hunterborn found: Hunterborn support is coming soon, nothing is changed for it yet");
 		}
+		if (g_firmament) {
+			// Proves the local FormIDs in SA_Firmament.psc still point at the perks and the effect they are meant to: a wrong ID would silently do nothing.
+			for (const std::int32_t id : { 16, 17, 18, 19, 20, 22, 23, 24, 25, 26 }) {
+				const auto perk = Cached(g_perks, id);
+				SKSE::log::info("Firmament perk {:#04x}: {}", id, perk ? perk->GetName() : "NOT FOUND");
+			}
+			const auto effect = Cached(g_effects, 167);
+			SKSE::log::info("Firmament effect {:#04x}: {}", 167, effect ? effect->GetName() : "NOT FOUND");
+		}
 		// The original "Firmament - Last Seed & Frostfall Compatibility" patch does the same job with its own scripts and DLL.
 		for (const auto name : { L"FirmamentLSFFCompat.dll", L"FirmamentFrostfallCompat.dll" }) {
 			if (GetModuleHandleW(name)) {
@@ -133,7 +142,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SetupLog();
-	SKSE::log::info("SurvivalAccord.dll 1.0.0, game {}", REL::Module::get().version().string());
+	SKSE::log::info("SurvivalAccord.dll 1.0.1, game {}", REL::Module::get().version().string());
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);
 	return true;

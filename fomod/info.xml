@@ -2,7 +2,7 @@
 <fomod>
   <Name>Survival Accord</Name>
   <Author>CageTV</Author>
-  <Version>1.0.0</Version>
+  <Version>1.0.1</Version>
   <Website>https://github.com/CageTV/SurvivalAccord</Website>
   <Description>Connects Firmament's Exploration perks to Last Seed 2026 (Hunger, Fatigue, camping) and Frostfall 2026 (cold Exposure). A small SKSE plugin and updated scripts built for the 2026 versions, without Firmament.dll being touched. Hunterborn support is coming soon. Install after Last Seed 2026 and Frostfall 2026.</Description>
 </fomod>
