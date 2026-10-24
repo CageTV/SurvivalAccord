@@ -8,11 +8,11 @@ the light plugin was built in E:/WorkSpace/valhallaCombat (tools/esl_build.py):
 Zip layout (the folder names are the ones fomod/ModuleConfig.xml installs from):
     fomod/info.xml, fomod/ModuleConfig.xml
     LICENSE.txt, NOTICE.txt, LICENSE-GPL-3.0.txt
-    Core/SKSE/Plugins/SurvivalAccord.dll, Core/Scripts/SA_Firmament.pex, Core/Scripts/SurvivalAccordNative.pex (+ Source)
+    Core/Scripts/SA_Firmament.pex, Core/Scripts/SurvivalAccordNative.pex (+ Source)
+    Current/<part>/SKSE/Plugins/*.dll (SurvivalAccord, ValhallaCombat, ArcheryLocationalDamage, DPF), Legacy/<part>/... (SurvivalAccord, ValhallaCombat)
     Last Seed/Scripts/*.pex (+ Source), Frostfall/Scripts/_Frost_ExposureSystem.pex (+ Source)
-    Valhalla Combat/SKSE/Plugins/ValhallaCombat.dll, ValhallaCombat.esp, SKSE/Plugins/ValhallaCombat/Killmoves.ini, RaceMapping/Vanilla.ini, Licenses/*
-    Archery Locational Damage/SKSE/Plugins/ArcheryLocationalDamage.dll, Licenses/*
-    DPF/SKSE/Plugins/DPF.dll, Licenses/*
+    Valhalla Combat/ValhallaCombat.esp, SKSE/Plugins/ValhallaCombat/Killmoves.ini, RaceMapping/Vanilla.ini, Licenses/*
+    Archery Locational Damage/Licenses/*, DPF/Licenses/*
 """
 import re
 import sys
@@ -33,13 +33,15 @@ GROUPS = {
     "Last Seed": ["_Seed_FatigueSystem", "_Seed_HungerSystem", "_Seed_PlayerEatMonitor"],
     "Frostfall": ["_Frost_ExposureSystem"],
 }
-TOP = ["LICENSE.txt", "NOTICE.txt", "LICENSE-GPL-3.0.txt"]
+TOP = ["LICENSE.txt", "NOTICE.txt", "LICENSE-GPL-3.0.txt", "ThirdParty-Notices.txt"]
 LIC = root / "licenses"
 
-# folder in the zip -> list of (source file, path inside the folder)
+# folder in the zip -> list of (source file, path inside the folder). The DLLs are in their own folders (Current/ and Legacy/) that the installer picks by the
+# Skyrim version page: current = alandtse's CommonLibSSE-NG build (1.6.1170 and newer), legacy = CharmedBaryon's build (SE 1.5.97, AE before 1.6.1170, untested).
+LEGACY_VC = vc / "legacy" / "build" / "release" / "ValhallaCombat.dll"
+LEGACY_SA = root / "plugin" / "build" / "release" / "SurvivalAccord.dll"
 COMBAT = {
     "Valhalla Combat": [
-        (out_dir / "ValhallaCombat" / "ValhallaCombat.dll", "SKSE/Plugins/ValhallaCombat.dll"),
         (vc / "release-contents" / "ValhallaCombat.esp", "ValhallaCombat.esp"),
         (vc / "data" / "SKSE/Plugins/ValhallaCombat/Killmoves.ini", "SKSE/Plugins/ValhallaCombat/Killmoves.ini"),
         (vc / "data" / "SKSE/Plugins/ValhallaCombat/RaceMapping/Vanilla.ini", "SKSE/Plugins/ValhallaCombat/RaceMapping/Vanilla.ini"),
@@ -47,21 +49,26 @@ COMBAT = {
         (LIC / "ValhallaCombat-NOTICE.txt", "Licenses/ValhallaCombat-NOTICE.txt"),
     ],
     "Archery Locational Damage": [
-        (out_dir / "ArcheryLocationalDamage" / "ArcheryLocationalDamage.dll", "SKSE/Plugins/ArcheryLocationalDamage.dll"),
         (LIC / "ArcheryLocationalDamage-MIT.txt", "Licenses/ArcheryLocationalDamage-MIT.txt"),
         (LIC / "ArcheryLocationalDamage-NOTICE.txt", "Licenses/ArcheryLocationalDamage-NOTICE.txt"),
     ],
     "DPF": [
-        (out_dir / "DPF" / "DPF.dll", "SKSE/Plugins/DPF.dll"),
         (LIC / "DPF-NOTICE.txt", "Licenses/DPF-NOTICE.txt"),
     ],
+    "Current/SurvivalAccord": [(out_dir / "SurvivalAccord" / "SurvivalAccord.dll", "SKSE/Plugins/SurvivalAccord.dll")],
+    "Legacy/SurvivalAccord": [(LEGACY_SA, "SKSE/Plugins/SurvivalAccord.dll")],
+    "Current/ValhallaCombat": [(out_dir / "ValhallaCombat" / "ValhallaCombat.dll", "SKSE/Plugins/ValhallaCombat.dll")],
+    "Legacy/ValhallaCombat": [(LEGACY_VC, "SKSE/Plugins/ValhallaCombat.dll")],
+    "Current/ArcheryLocationalDamage": [(out_dir / "ArcheryLocationalDamage" / "ArcheryLocationalDamage.dll", "SKSE/Plugins/ArcheryLocationalDamage.dll")],
+    "Current/DPF": [(out_dir / "DPF" / "DPF.dll", "SKSE/Plugins/DPF.dll")],
 }
 dll = out_dir / "SurvivalAccord" / "SurvivalAccord.dll"
 
 if not dll.is_file():
     sys.exit(f"missing {dll} - build the DLL first")
-if plugin_version.encode() not in dll.read_bytes():
-    sys.exit(f"{dll} was not built from version {plugin_version}")
+for d in (dll, LEGACY_SA):
+    if not d.is_file() or plugin_version.encode() not in d.read_bytes():
+        sys.exit(f"{d} is missing or was not built from version {plugin_version}")
 for name in sum(GROUPS.values(), []):
     if not (scripts / f"{name}.pex").is_file() or not (scripts / "Source" / f"{name}.psc").is_file():
         sys.exit(f"missing {name}.pex / .psc - run tools/build_scripts.py")
@@ -86,8 +93,7 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.write(root / "docs/logo.png", "fomod/images/logo.png")
     z.write(root / "docs/logo-square.png", "fomod/images/logo-square.png")
     for t in TOP:
-        z.write(root / t, t)
-    z.write(dll, "Core/SKSE/Plugins/SurvivalAccord.dll")
+        z.write(root / ("licenses/" + t if t.startswith("ThirdParty") else t), t)
     for folder, names in GROUPS.items():
         for n in names:
             z.write(scripts / f"{n}.pex", f"{folder}/Scripts/{n}.pex")
@@ -95,7 +101,8 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     for folder, files in COMBAT.items():
         for src, inside in files:
             z.write(src, f"{folder}/{inside}")
-        z.write(root / "LICENSE-GPL-3.0.txt", f"{folder}/Licenses/LICENSE-GPL-3.0.txt")
+        if not folder.startswith(("Current/", "Legacy/")):
+            z.write(root / "LICENSE-GPL-3.0.txt", f"{folder}/Licenses/LICENSE-GPL-3.0.txt")
 with zipfile.ZipFile(out) as z:
     assert z.testzip() is None
     assert not any("\\" in n for n in z.namelist())

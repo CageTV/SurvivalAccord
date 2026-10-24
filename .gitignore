@@ -3,3 +3,4 @@ release/
 release-contents/
 __pycache__/
 *.log
+plugin/build/

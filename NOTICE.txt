@@ -46,10 +46,14 @@ GNU General Public License v3.0, as the original. Details: Licenses/DPF-NOTICE.t
 ------------------------------------------------------------------------------------------------------------------------------------------------
 The DLLs
 ------------------------------------------------------------------------------------------------------------------------------------------------
-SurvivalAccord.dll, ValhallaCombat.dll, ArcheryLocationalDamage.dll and DPF.dll are built with alandtse's CommonLibSSE-NG (https://github.com/alandtse/CommonLibSSE-NG),
+The current builds of SurvivalAccord.dll, ValhallaCombat.dll, ArcheryLocationalDamage.dll and DPF.dll are built with alandtse's CommonLibSSE-NG (https://github.com/alandtse/CommonLibSSE-NG),
 which is licensed under the GNU General Public License v3.0 or later with a modding exception. The compiled DLLs are therefore distributed under the terms of the
 GNU General Public License, version 3 or (at your option) any later version. The MIT and BSD 3-Clause licenses of the sources allow this. The full, unmodified
 GPL-3.0 text is in LICENSE-GPL-3.0.txt.
+
+The legacy builds of SurvivalAccord.dll and ValhallaCombat.dll (Skyrim SE 1.5.97 and AE before 1.6.1170) are built from the same source with CharmedBaryon's CommonLibSSE-NG
+(https://github.com/CharmedBaryon/CommonLibSSE-NG, MIT License, based on CommonLibSSE by Ryan-rsm-McKenzie) and carry the licenses of their sources (MIT for Survival Accord,
+BSD 3-Clause for Valhalla Combat). The notices of the libraries compiled into every DLL (CommonLibSSE, spdlog, {fmt}, SimpleIni, Xbyak) are in ThirdParty-Notices.txt.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
 Software Foundation, either version 3 of the License, or (at your option) any later version.
