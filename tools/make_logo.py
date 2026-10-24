@@ -152,7 +152,7 @@ def banner():
     sub = "A COMBAT SURVIVAL ACCORD"
     ws = spaced_width(d, sub, f2, 5) / S
     spaced(d, ((x0 + (wtitle - ws) / 2) * S, 240 * S), sub, f2, STEEL, 5)
-    tag = "VaCSA   -   Skyrim 1.5.97 to 1.7.104   -   SE and AE"
+    tag = "VaCSA   -   Skyrim AE 1.6.1170 to 1.7.104"
     wt = spaced_width(d, tag, f3, 1) / S
     spaced(d, ((x0 + (wtitle - wt) / 2) * S, 300 * S), tag, f3, (150, 162, 180), 1)
     return img.convert("RGB").resize((W, H), Image.LANCZOS)

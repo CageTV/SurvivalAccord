@@ -1,7 +1,7 @@
 [center][img]https://raw.githubusercontent.com/CageTV/SurvivalAccord/main/docs/logo.png[/img]
 
 [center][size=6][b]Valhalla A Combat Survival Accord[/b][/size]
-[size=3](VaCSA) - one mod, installed in parts, for Skyrim 1.5.97 to 1.7.104 (SE and AE)[/size][/center]
+[size=3](VaCSA) - one mod, installed in parts, for Skyrim AE 1.6.1170 to 1.7.104[/size][/center]
 
 [line]
 
@@ -14,7 +14,7 @@ VaCSA is a modular FOMOD. You install only the parts you use:
 [*][b]Archery Locational Damage, 1.7 build[/b] - the same mod, a DLL that runs on 1.7.104 and no longer crashes with Firmament's skill use.
 [*][b]DPF RE, 1.7.104 DLL[/b] - Dynamic Persistent Forms REthinked has no DLL for 1.7.104; this one is needed by Parry for All.
 [/list]
-All the DLLs use Address Library, so one build covers Skyrim 1.5.97, 1.6.x and 1.7.x (SE and AE). Skyrim VR is not covered.
+All the DLLs use Address Library and are built for Skyrim 1.6.1170 and newer; they are tested on 1.7.104. Skyrim VR and older versions (1.5.97, and 1.6.x before 1.6.1170) are not covered: use the original mods there.
 
 [line]
 
@@ -74,7 +74,7 @@ All the DLLs use Address Library, so one build covers Skyrim 1.5.97, 1.6.x and 1
 
 [size=4][b]Valhalla Combat 1.7 build[/b][/size]
 [list]
-[*][b]Runs on 1.7.104[/b] and on 1.5.97 to 1.6.1170. The old fixed call sites that broke on 1.7 are found by what they call, and any hook that cannot be placed safely is skipped and written to the log instead of corrupting memory.
+[*][b]Runs on 1.7.104[/b] (built for 1.6.1170 and newer). The old fixed call sites that broke on 1.7 are found by what they call, and any hook that cannot be placed safely is skipped and written to the log instead of corrupting memory.
 [*][b]One settings menu[/b] in SKSE Menu Framework (Mod Control Panel > Valhalla Combat). No MCM Helper, no Papyrus. The settings are in SKSE\Plugins\ValhallaCombat\Settings.ini.
 [*][b]Light plugin[/b] - an ESL ValhallaCombat.esp with the Backstab Bug Fix inside.
 [*][b]Stop On Slash[/b] - hit stop and screen shake, per weapon and per attack type (Hit Stop page).

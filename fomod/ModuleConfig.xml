@@ -20,7 +20,7 @@
               <description>Valhalla A Combat Survival Accord (VaCSA) is one mod installed in parts. Pick only the parts you use on the next pages.
 
 NEEDED BY EVERY PART
- - Skyrim Special Edition / Anniversary Edition: 1.5.97, 1.6.x or 1.7.x (the DLLs use Address Library, so one build covers them). Skyrim VR is not covered.
+ - Skyrim Anniversary Edition 1.6.1170 or newer, up to 1.7.104 (tested on 1.7.104). The DLLs use Address Library. Skyrim VR and older versions (1.5.97, 1.6.x before 1.6.1170) are not covered: use the original mods there.
  - SKSE64: https://skse.silverlock.org/
  - Address Library for SKSE Plugins: https://www.nexusmods.com/skyrimspecialedition/mods/32444
  - Microsoft Visual C++ Redistributable 2022 (x64), if the game shows a pop-up when it starts.
@@ -109,11 +109,11 @@ Chosen for you when Frostfall (Frostfall.esp) is in your load order. Install thi
 
     <installStep name="Combat">
       <optionalFileGroups order="Explicit">
-        <group name="Combat parts (1.5.97 to 1.7.104, SE and AE)" type="SelectAny">
+        <group name="Combat parts (Skyrim AE 1.6.1170 to 1.7.104)" type="SelectAny">
           <plugins order="Explicit">
 
             <plugin name="Valhalla Combat - 1.7 build with Stop On Slash, Elden Counter and Elden Parry built in">
-              <description>Replaces Valhalla Combat's plugin and DLL with a build that runs on Skyrim 1.7.104 (and 1.5.97 to 1.6.1170), and adds three of dTry's mods as built-in features:
+              <description>Replaces Valhalla Combat's plugin and DLL with a build that runs on Skyrim 1.7.104 (built for 1.6.1170 and newer), and adds three of dTry's mods as built-in features:
  - Stop On Slash: hit stop and screen shake.
  - Elden Counter: the guard counter window after a block (the counter animations stay a separate download).
  - Elden Parry: a bash while an attack lands is a parry; projectiles are deflected. A Parry system setting picks Elden Parry, Parry for All, or off, so two parry systems never fight.
@@ -161,7 +161,7 @@ Tested on a save that already used Valhalla Combat. Chosen for you when Valhalla
             </plugin>
 
             <plugin name="Archery Locational Damage - 1.7 build">
-              <description>Replaces Archery Locational Damage's DLL with a build that runs on Skyrim 1.7.104 (and 1.5.97 to 1.6.1170). It fixes the crashes with Firmament's skill use and uses Address Library everywhere. The settings (INI presets) stay Archery Locational Damage's own.
+              <description>Replaces Archery Locational Damage's DLL with a build that runs on Skyrim 1.7.104 (built for 1.6.1170 and newer). It fixes the crashes with Firmament's skill use and uses Address Library everywhere. The settings (INI presets) stay Archery Locational Damage's own.
 
 REQUIRES (install this first)
  - Archery Locational Damage, main file with an INI preset chosen in its installer: https://www.nexusmods.com/skyrimspecialedition/mods/63863
@@ -190,7 +190,7 @@ Chosen for you when Archery Locational Damage (ArcheryLocationalDamage.esp) is i
             </plugin>
 
             <plugin name="DPF RE - 1.7.104 DLL (for Parry for All)">
-              <description>Dynamic Persistent Forms REthinked has no DLL for Skyrim 1.7.104, so Parry for All (and anything built on Dynamic Forms Generator) cannot create its forms there. This DLL is a rebuild of the same source for 1.5.97 to 1.7.104, SE and AE; it replaces DPF.dll and changes nothing else. Skyrim VR: keep the original DPF.dll.
+              <description>Dynamic Persistent Forms REthinked has no DLL for Skyrim 1.7.104, so Parry for All (and anything built on Dynamic Forms Generator) cannot create its forms there. This DLL is a rebuild of the same source for 1.6.1170 and newer (tested on 1.7.104); it replaces DPF.dll and changes nothing else. Skyrim VR and older versions: keep the original DPF.dll.
 
 REQUIRES (install this first)
  - Dynamic Persistent Forms REthinked - DPF RE: https://www.nexusmods.com/skyrimspecialedition/mods/183427

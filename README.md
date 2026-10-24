@@ -1,6 +1,6 @@
 # Valhalla A Combat Survival Accord (VaCSA)
 
-One mod installed in parts (a FOMOD) for Skyrim 1.5.97 to 1.7.104, SE and AE:
+One mod installed in parts (a FOMOD) for Skyrim AE 1.6.1170 to 1.7.104 (tested on 1.7.104):
 
 | Part | What it is | Source |
 |---|---|---|
@@ -54,7 +54,7 @@ error in `SurvivalAccord.log` if it finds either of them.
   off in memory; Survival Accord does not (it would mean patching another mod's code). If you run Bethesda's Survival Mode you might get the bonus twice.
   Last Seed replaces Survival Mode, so most setups are not affected.
 - The scripts are replacements of four Last Seed 2026 / Frostfall 2026 scripts. If either mod changes one of those scripts, Survival Accord has to follow.
-- Skyrim VR is not covered (the DLL is the SE / AE build).
+- Skyrim VR and versions before 1.6.1170 are not covered (the DLLs are built for 1.6.1170 and newer).
 
 ## Hunterborn
 
