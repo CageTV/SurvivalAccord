@@ -21,9 +21,9 @@ from the "Valhalla Combat DLL Patch" source (Nexus 190197, also BSD 3-Clause). T
 guarded call sites, an RTTI conversion of the ActorValueOwner, the SKSE Menu Framework settings, the light plugin) are by CageTV.
 Full details: Licenses/ValhallaCombat-NOTICE.txt.
 
-Features of other mods by the same author (dTry) that are built into the Valhalla Combat DLL, with his permission: his Nexus profile bio, written when he left modding, states open permissions for all of his mods:
+Features of other mods by the same author (dTry) that are built into the Valhalla Combat DLL, with his permission; his Nexus profile (About Me) says: "I grant any mod author permission to modify, fix, port any of my mod, or use any resources within it, without notifying me, in perpetuity, forever, throughout the universe." A screenshot is kept in the source repository (docs/permissions).
   Stop On Slash (Nexus 66155, https://github.com/D7ry/StopOnSlash), Elden Counter (Nexus 65579, https://github.com/D7ry/EldenCounter) and Elden Parry
-  (Nexus 70240, https://github.com/D7ry/EldenParry). Their public repositories carry no license file, so the profile statement is the permission. The animations and
+  (Nexus 70240, https://github.com/D7ry/EldenParry). Their public repositories carry no license file, so that statement is the permission. The animations and
   plugin of Elden Counter, and the animations of Elden Parry, are NOT included; they stay separate Nexus downloads (see the requirements on the mod page).
 The Backstab Bug Fix by Moonling (Nexus 97195) is built into ValhallaCombat.esp (the conditions and related idles of the two kill move idle records).
 Valhalla Combat's own meshes, sounds, textures and translations are NOT included: the original Valhalla Combat (Nexus 64741) must be installed first.
