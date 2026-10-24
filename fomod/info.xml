@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fomod>
-  <Name>Survival Accord</Name>
+  <Name>Valhalla A Combat Survival Accord</Name>
   <Author>CageTV</Author>
-  <Version>1.0.1</Version>
+  <Version>1.1.0</Version>
   <Website>https://github.com/CageTV/SurvivalAccord</Website>
-  <Description>Connects Firmament's Exploration perks to Last Seed 2026 (Hunger, Fatigue, camping) and Frostfall 2026 (cold Exposure). A small SKSE plugin and updated scripts built for the 2026 versions, without Firmament.dll being touched. Hunterborn support is coming soon. Install after Last Seed 2026 and Frostfall 2026.</Description>
+  <Description>One mod installed in parts for Skyrim 1.5.97 to 1.7.104 (SE and AE): Survival Accord (Firmament perks for Last Seed 2026 and Frostfall 2026), a 1.7 build of Valhalla Combat with Stop On Slash, Elden Counter and Elden Parry built in, a 1.7 build of Archery Locational Damage, and a 1.7.104 DLL for DPF RE (Parry for All). Each part lists the mods it needs on its page. Licenses and source links are installed to Data\Licenses.</Description>
 </fomod>

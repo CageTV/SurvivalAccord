@@ -1,0 +1,144 @@
+[center][size=6][b]Valhalla A Combat Survival Accord[/b][/size]
+[size=3](VaCSA) - one mod, installed in parts, for Skyrim 1.5.97 to 1.7.104 (SE and AE)[/size][/center]
+
+[line]
+
+[size=4][b]What is it?[/b][/size]
+VaCSA is a modular FOMOD. You install only the parts you use:
+
+[list]
+[*][b]Survival Accord[/b] - connects Firmament's Exploration perks to Last Seed 2026 (Hunger, Fatigue, camping) and Frostfall 2026 (cold Exposure).
+[*][b]Valhalla Combat, 1.7 build[/b] - runs on Skyrim 1.7.104 and older, with Stop On Slash, Elden Counter and Elden Parry built in, one settings menu, and a parry system selector.
+[*][b]Archery Locational Damage, 1.7 build[/b] - the same mod, a DLL that runs on 1.7.104 and no longer crashes with Firmament's skill use.
+[*][b]DPF RE, 1.7.104 DLL[/b] - Dynamic Persistent Forms REthinked has no DLL for 1.7.104; this one is needed by Parry for All.
+[/list]
+All the DLLs use Address Library, so one build covers Skyrim 1.5.97, 1.6.x and 1.7.x (SE and AE). Skyrim VR is not covered.
+
+[line]
+
+[size=4][b]Requirements[/b][/size]
+[b]Every part[/b]
+[list]
+[*][url=https://skse.silverlock.org/]SKSE64[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/32444]Address Library for SKSE Plugins[/url]
+[/list]
+
+[b]Survival Accord (pick Last Seed and / or Frostfall in the installer)[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/193833]Last Seed 2026[/url] and / or [url=https://www.nexusmods.com/skyrimspecialedition/mods/193732]Frostfall 2026[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/153781]Firmament[/url] (it needs [url=https://www.nexusmods.com/skyrimspecialedition/mods/117352]Constellations[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/41780]Custom Skills Framework[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/84743]Actor Value Generator[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/36869]SPID[/url])
+[/list]
+
+[b]Valhalla Combat 1.7 build[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/64741]Valhalla Combat[/url] - install the main file first: its meshes, sounds and textures are not repeated here
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/72347]Precision - Accurate Melee Collisions[/url] - melee hits on 1.7 go through it
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/62775]TrueHUD - HUD Additions[/url], and on Skyrim 1.7 the [url=https://www.nexusmods.com/skyrimspecialedition/mods/189792]TrueHUD 1.7.99 update[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/120352]SKSE Menu Framework[/url] - the settings page
+[/list]
+
+[b]Archery Locational Damage 1.7 build[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/63863]Archery Locational Damage[/url] - main file, with an INI preset chosen in its installer
+[/list]
+
+[b]DPF RE 1.7.104 DLL[/b]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/183427]Dynamic Persistent Forms REthinked - DPF RE[/url] - install it first, this replaces its DLL only
+[/list]
+
+[line]
+
+[size=4][b]Recommended with Valhalla Combat[/b][/size]
+[list]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/184932]Valhalla Combat AIO Patch[/url] - race mapping for modded creatures, so stun, stagger and executions work on them
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/65579]Elden Counter[/url] - the counter animations and plugin. [b]Do not use its DLL[/b]: the guard counter is built into Valhalla Combat. It needs [url=https://www.nexusmods.com/skyrimspecialedition/mods/50258]Animation Motion Revolution[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/65089]Payload Interpreter[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/92109]Open Animation Replacer[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/83526]SHD and 2HM parry animation[/url] - shield and greatsword bash animations made for the parry
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/119938]BFCO Elden Parry Precision Patch[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/192008]BFCO Jump Attack Stamina Cost for Valhalla Combat[/url] - if you use BFCO
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/167873]Parry for All[/url] - NPCs and the player parry with the block. Use it [i]instead of[/i] Elden Parry (see below). It needs [url=https://www.nexusmods.com/skyrimspecialedition/mods/182988]Dynamic Forms Generator[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/78146]Behavior Data Injector[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/175848]Notify Events[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/164546]State Behavior Framework[/url]
+[/list]
+
+[line]
+
+[size=4][b]Remove these (the new build contains them)[/b][/size]
+[list]
+[*]Valhalla Combat DLL Patch for 1170 / 1799 / 17104 (Nexus 190197)
+[*]Valhalla Combat - Backstab Bug Fix (Nexus 97195)
+[*]The DLLs of Stop On Slash, Elden Parry and Elden Counter (Nexus 66155, 70240, 65579). Keep the Elden Counter animations and plugin.
+[*]Shield of Stamina - Valhalla Combat includes it
+[/list]
+
+[line]
+
+[size=4][b]Valhalla Combat 1.7 build[/b][/size]
+[list]
+[*][b]Runs on 1.7.104[/b] and on 1.5.97 to 1.6.1170. The old fixed call sites that broke on 1.7 are found by what they call, and any hook that cannot be placed safely is skipped and written to the log instead of corrupting memory.
+[*][b]One settings menu[/b] in SKSE Menu Framework (Mod Control Panel > Valhalla Combat). No MCM Helper, no Papyrus. The settings are in SKSE\Plugins\ValhallaCombat\Settings.ini.
+[*][b]Light plugin[/b] - an ESL ValhallaCombat.esp with the Backstab Bug Fix inside.
+[*][b]Stop On Slash[/b] - hit stop and screen shake, per weapon and per attack type (Hit Stop page).
+[*][b]Elden Counter[/b] - block, then power attack inside the counter window. The window length is a slider.
+[*][b]Elden Parry[/b] - a light bash has no hit; a bash while an attack lands is a parry: the attacker is staggered and takes parry stun, arrows and spells are deflected, a power bash is a guard bash. Successful parries cost no stamina.
+[*][b]Parry system[/b] - Parry page: Elden Parry, Parry for All, or off, so two parry systems never act on the same hit. The Overview page warns if both are on.
+[*][b]Executions[/b] - the stun defaults are raised (power attack, parry and power bash stun) so enemies actually break on Legendary difficulty. Everything is a slider on the Stun&Execution page.
+[*]Works with Precision, True Directional Movement and SKSE Menu Framework key binds (mouse buttons too).
+[/list]
+
+[b]Tips[/b]
+[list]
+[*]Parry for All as the parry: set Parry system to Parry for All, and turn off Timed Blocking and Timed block projectiles on the Timed Block page, otherwise every block has two parry windows.
+[*]Settings are written when you change them in the menu. Do not edit Settings.ini while the game runs.
+[/list]
+
+[line]
+
+[size=4][b]Installation[/b][/size]
+[list=1]
+[*]Install the requirements of the parts you want (above). Remove the mods in the "Remove" list.
+[*]Install VaCSA with your mod manager and pick the parts in the installer. Parts for mods in your load order are pre-selected.
+[*]Install it [b]after[/b] Last Seed 2026, Frostfall 2026, Valhalla Combat, Archery Locational Damage and DPF RE (below them in the left pane), so its files win.
+[*]Do not install it together with "Firmament - Last Seed and Frostfall Compatibility" or "FirmamentFrostfallCompat": they replace the same scripts.
+[/list]
+
+[line]
+
+[size=4][b]Survival Accord[/b][/size]
+[list]
+[*]Resilience I-V and Fortify Exploration equipment - Frostfall cold Exposure gains up to 50% slower
+[*]Camper I-II - Last Seed Fatigue 20 / 40% slower; sleeping outdoors counts as a Well Rested sleep
+[*]Field Rations I-II - food restores 1.5x / 2.0x Last Seed Hunger
+[*]Dungeon Delver - Hunger and Fatigue 50% slower inside a Last Seed dungeon interior
+[*]Pathfinder - Hunger and Fatigue slower by the ExplorationPotions value
+[*]Without Firmament the scripts behave exactly like Last Seed 2026 and Frostfall 2026. Hunterborn support is coming soon.
+[/list]
+
+[line]
+
+[size=4][b]Known limits[/b][/size]
+[list]
+[*]Skyrim VR is not covered by these DLLs. For DPF RE keep the original DLL on VR.
+[*]Hits that neither Precision nor the vanilla hit function report (some scripted or modded attacks) do not give stun.
+[*]In the stamina debuff, the player's attack button is held back by the plugin; NPCs are handled as before.
+[*]Camper and Firmament's own sleep handler: if you run Bethesda's Survival Mode you might get the Well Rested bonus twice. Last Seed replaces Survival Mode, so most setups are not affected.
+[/list]
+
+[line]
+
+[size=4][b]Credits[/b][/size]
+[list]
+[*][b]dTry (D7ry)[/b] - Valhalla Combat, Stop On Slash, Elden Counter, Elden Parry. Thank you for the open permissions on your mods.
+[*][b]tonycubed2[/b] - Valhalla Combat DLL Patch (the 1.7.x fixes)
+[*][b]Moonling[/b] - Valhalla Combat - Backstab Bug Fix
+[*][b]Tossapon[/b] - Archery Locational Damage
+[*][b]Thiago and Viny[/b] - Dynamic Persistent Forms REthinked; [b]RetiredViny[/b] - Parry for All
+[*][b]Thiago[/b] - SKSE Menu Framework
+[*][b]Ersh[/b] - Precision and TrueHUD
+[*][b]Chesko and Aytrus[/b] - Last Seed; [b]Chesko[/b] - Frostfall and Campfire
+[*][b]JPSteel2[/b] - Firmament; [b]Parapets[/b] - Constellations
+[*][b]SHADOWPQ[/b] - the parry animations; [b]Black[/b] - the counter animations; [b]GennyWoo[/b] - Valhalla Combat AIO Patch
+[*][b]alandtse[/b], [b]Ryan[/b] and the CommonLib contributors - CommonLibSSE-NG
+[/list]
+
+[line]
+
+[size=4][b]Source and licenses[/b][/size]
+The complete source of every DLL is on GitHub: [url=https://github.com/CageTV/SurvivalAccord]SurvivalAccord[/url], [url=https://github.com/CageTV/valhallaCombat]valhallaCombat[/url] (branch ng-17x), [url=https://github.com/CageTV/ArcheryLocationalDamage]ArcheryLocationalDamage[/url] (branch ng-17x) and [url=https://github.com/CageTV/DPF]DPF[/url] (branch ng-17x). The license files and the notice of every part are installed to Data\Licenses.

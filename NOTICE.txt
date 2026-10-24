@@ -1,18 +1,55 @@
-Survival Accord - license notice
+Valhalla A Combat Survival Accord (VaCSA) - license notice
 
 Source code: https://github.com/CageTV/SurvivalAccord
-The complete source of this download is in that repository; the tag matching this release is named in the release notes.
+The complete source of this download is in that repository and in the repositories named below; the tags matching this release are named in the release notes.
+This download is a modular installer. Each module carries its own license files under Licenses/ when it is installed. Nothing here is hidden: every
+third-party file, its author and its license is listed in this notice.
 
-Copyright (c) 2026 CageTV.
+------------------------------------------------------------------------------------------------------------------------------------------------
+1. Survival Accord (Core, Last Seed and Frostfall modules)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Copyright (c) 2026 CageTV. Released under the MIT License (LICENSE.txt). The Papyrus scripts _Seed_FatigueSystem, _Seed_HungerSystem and
+_Seed_PlayerEatMonitor are modified versions of Last Seed - Survival Needs and Diseases by Chesko and Aytrus, and _Frost_ExposureSystem is a modified
+version of Frostfall by Chesko; both are MIT licensed by their authors (their notices are in LICENSE.txt).
 
-The files written for this repository are released under the MIT License (LICENSE.txt). The Papyrus scripts _Seed_FatigueSystem, _Seed_HungerSystem
-and _Seed_PlayerEatMonitor are modified versions of Last Seed - Survival Needs and Diseases by Chesko and Aytrus, and _Frost_ExposureSystem is a
-modified version of Frostfall by Chesko; both are MIT licensed by their authors (their notices are in LICENSE.txt).
+------------------------------------------------------------------------------------------------------------------------------------------------
+2. Valhalla Combat (ng build) module
+------------------------------------------------------------------------------------------------------------------------------------------------
+Source: https://github.com/CageTV/valhallaCombat (branch ng-17x), a fork of https://github.com/D7ry/valhallaCombat
+Copyright (c) 2024 dTry (D7ry). The source files are licensed under the BSD 3-Clause License (Licenses/ValhallaCombat-BSD-3-Clause.txt). The 1.7.x fixes come
+from the "Valhalla Combat DLL Patch" source (Nexus 190197, also BSD 3-Clause). The changes for the ng build (an Address Library V5 plugin declaration,
+guarded call sites, an RTTI conversion of the ActorValueOwner, the SKSE Menu Framework settings, the light plugin) are by CageTV.
+Full details: Licenses/ValhallaCombat-NOTICE.txt.
 
-The SurvivalAccord.dll in this download is built with alandtse's CommonLibSSE-NG (https://github.com/alandtse/CommonLibSSE-NG), which is licensed
-under the GNU General Public License v3.0 or later with a modding exception. The compiled SurvivalAccord.dll is therefore distributed under the
-terms of the GNU General Public License, version 3 or (at your option) any later version. The full, unmodified GPL-3.0 text is in
-LICENSE-GPL-3.0.txt.
+Features of other mods by the same author (dTry) that are built into the Valhalla Combat DLL, with his permission (he has given open permissions on his mods):
+  Stop On Slash (Nexus 66155, https://github.com/D7ry/StopOnSlash), Elden Counter (Nexus 65579, https://github.com/D7ry/EldenCounter) and Elden Parry
+  (Nexus 70240, https://github.com/D7ry/EldenParry). Their public repositories carry no license file, which is why this paragraph exists. The animations and
+  plugin of Elden Counter, and the animations of Elden Parry, are NOT included; they stay separate Nexus downloads (see the requirements on the mod page).
+The Backstab Bug Fix by Moonling (Nexus 97195) is built into ValhallaCombat.esp (the conditions and related idles of the two kill move idle records).
+Valhalla Combat's own meshes, sounds, textures and translations are NOT included: the original Valhalla Combat (Nexus 64741) must be installed first.
+src/include/lib/SKSEMenuFramework.h is the SKSE Menu Framework SDK header by Thiago (Nexus 120352), used unmodified; the header is not part of this download.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+3. Archery Locational Damage (ng build) module
+------------------------------------------------------------------------------------------------------------------------------------------------
+Source: https://github.com/CageTV/ArcheryLocationalDamage (branch ng-17x), a fork of https://github.com/tossaponk/ArcheryLocationalDamage
+Copyright (c) 2022 tossaponk. MIT License (Licenses/ArcheryLocationalDamage-MIT.txt). The ng changes are by CageTV. Details: Licenses/ArcheryLocationalDamage-NOTICE.txt.
+Only the DLL is included; the original Archery Locational Damage (Nexus 63863) must be installed first.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+4. Dynamic Persistent Forms REthinked (DPF) - 1.7.x build module
+------------------------------------------------------------------------------------------------------------------------------------------------
+Source: https://github.com/CageTV/DPF (branch ng-17x), a fork of https://github.com/vinymayan/DPF
+Original work: Thiago and Viny (GPL-3.0). The fork changes only the build (CommonLibSSE-NG instead of CommonLibSSE with fixed game offsets). Distributed under the
+GNU General Public License v3.0, as the original. Details: Licenses/DPF-NOTICE.txt. Only the DLL is included; DPF RE (Nexus 183427) must be installed first.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+The DLLs
+------------------------------------------------------------------------------------------------------------------------------------------------
+SurvivalAccord.dll, ValhallaCombat.dll, ArcheryLocationalDamage.dll and DPF.dll are built with alandtse's CommonLibSSE-NG (https://github.com/alandtse/CommonLibSSE-NG),
+which is licensed under the GNU General Public License v3.0 or later with a modding exception. The compiled DLLs are therefore distributed under the terms of the
+GNU General Public License, version 3 or (at your option) any later version. The MIT and BSD 3-Clause licenses of the sources allow this. The full, unmodified
+GPL-3.0 text is in LICENSE-GPL-3.0.txt.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
 Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -22,5 +59,8 @@ FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more de
 
 You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-Firmament, Constellations, Valhalla Combat, Archery Locational Damage and Reading Is Good belong to their authors. Survival Accord does not contain
-or modify their files.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Not included (belong to their authors)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Firmament, Constellations, Valhalla Combat, Archery Locational Damage, Parry for All, Precision, TrueHUD, Elden Counter, Elden Parry and the other mods named on
+the mod page are not contained or modified by this download, except where this notice says a feature was built in.

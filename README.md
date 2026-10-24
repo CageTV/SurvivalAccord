@@ -1,4 +1,18 @@
-# Survival Accord
+# Valhalla A Combat Survival Accord (VaCSA)
+
+One mod installed in parts (a FOMOD) for Skyrim 1.5.97 to 1.7.104, SE and AE:
+
+| Part | What it is | Source |
+|---|---|---|
+| Survival Accord | Firmament perks for Last Seed 2026 and Frostfall 2026 (this repository) | here |
+| Valhalla Combat 1.7 build | Valhalla Combat with Stop On Slash, Elden Counter and Elden Parry built in | [valhallaCombat](https://github.com/CageTV/valhallaCombat), branch `ng-17x` |
+| Archery Locational Damage 1.7 build | the DLL for 1.7.104 | [ArcheryLocationalDamage](https://github.com/CageTV/ArcheryLocationalDamage), branch `ng-17x` |
+| DPF RE 1.7.104 DLL | DPF RE for 1.7.104, needed by Parry for All | [DPF](https://github.com/CageTV/DPF), branch `ng-17x` |
+
+The installer lists the mods each part needs; the Nexus description is in [docs/NEXUS_DESCRIPTION.bbcode](docs/NEXUS_DESCRIPTION.bbcode). Licenses and notices of every part are in
+`licenses/` and are installed to `Data/Licenses`. `python tools/package_release.py` builds `release/VaCSA-<version>.zip` from the four builds.
+
+## Survival Accord
 
 Connects **Firmament**'s Exploration perks to **Last Seed 2026** (Hunger, Fatigue, camping) and **Frostfall 2026** (cold Exposure), and is the
 place where more survival integrations will land. It is built for the 2026 versions of Last Seed and Frostfall (our updated builds of the originals),
