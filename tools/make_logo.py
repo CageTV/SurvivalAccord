@@ -2,6 +2,8 @@
 
     python tools/make_logo.py
 
+The PNGs in docs/ are this drawing run through Upscayl (digital art, 1x) by CageTV; running the script overwrites them with the plain drawing.
+
 Both are drawn at 3x and scaled down so the edges are smooth. The banner is used by the FOMOD (fomod/images) and the Nexus description; the square by the plugin
 previews in the installer and as a cover image.
 """
