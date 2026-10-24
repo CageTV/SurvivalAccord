@@ -83,6 +83,8 @@ out.parent.mkdir(exist_ok=True)
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.write(root / "fomod/info.xml", "fomod/info.xml")
     z.write(root / "fomod/ModuleConfig.xml", "fomod/ModuleConfig.xml")
+    z.write(root / "docs/logo.png", "fomod/images/logo.png")
+    z.write(root / "docs/logo-square.png", "fomod/images/logo-square.png")
     for t in TOP:
         z.write(root / t, t)
     z.write(dll, "Core/SKSE/Plugins/SurvivalAccord.dll")

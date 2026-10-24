@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
   <moduleName>Valhalla A Combat Survival Accord</moduleName>
+  <moduleImage path="fomod/images/logo.png" showImage="true" showFade="false" height="-1" />
 
   <requiredInstallFiles>
     <folder source="Core" destination="" />
@@ -31,6 +32,7 @@ PART BY PART (each part also lists its own requirements on its page)
  - DPF 1.7 build: DPF RE (needed by Parry for All).
 
 Licenses: every license and the source link of every part is installed to Data\Licenses and listed in NOTICE.</description>
+              <image path="fomod/images/logo-square.png" />
               <files />
               <typeDescriptor>
                 <type name="Required" />
@@ -54,6 +56,7 @@ REQUIRES
  - Firmament: https://www.nexusmods.com/skyrimspecialedition/mods/153781 (it needs Constellations https://www.nexusmods.com/skyrimspecialedition/mods/117352, Custom Skills Framework https://www.nexusmods.com/skyrimspecialedition/mods/41780, Actor Value Generator https://www.nexusmods.com/skyrimspecialedition/mods/84743 and SPID https://www.nexusmods.com/skyrimspecialedition/mods/36869)
 
 Chosen for you when Last Seed (LastSeed.esp) is in your load order. Install this mod after Last Seed 2026 so its scripts win.</description>
+              <image path="fomod/images/logo-square.png" />
               <files>
                 <folder source="Last Seed" destination="" />
               </files>
@@ -80,6 +83,7 @@ REQUIRES
  - Firmament: https://www.nexusmods.com/skyrimspecialedition/mods/153781 (and the mods it needs, listed in the Last Seed option above)
 
 Chosen for you when Frostfall (Frostfall.esp) is in your load order. Install this mod after Frostfall 2026 so its script wins.</description>
+              <image path="fomod/images/logo-square.png" />
               <files>
                 <folder source="Frostfall" destination="" />
               </files>
@@ -137,6 +141,7 @@ REMOVE (the new build already contains them)
  - Shield of Stamina (Valhalla Combat includes it)
 
 Tested on a save that already used Valhalla Combat. Chosen for you when Valhalla Combat is in your load order.</description>
+              <image path="fomod/images/logo-square.png" />
               <files>
                 <folder source="Valhalla Combat" destination="" />
               </files>
@@ -165,6 +170,7 @@ OPTIONAL
  - Archery Locational Damage - Realistic Preset: https://www.nexusmods.com/skyrimspecialedition/mods/140024
 
 Chosen for you when Archery Locational Damage (ArcheryLocationalDamage.esp) is in your load order.</description>
+              <image path="fomod/images/logo-square.png" />
               <files>
                 <folder source="Archery Locational Damage" destination="" />
               </files>
@@ -199,6 +205,7 @@ NEEDED BY PARRY FOR ALL (only if you use it)
 Then set Parry system to Parry for All on Valhalla Combat's Parry page, and turn off Valhalla Combat's own Timed Blocking.
 
 Chosen for you when DPF (DPF.esp) is in your load order.</description>
+              <image path="fomod/images/logo-square.png" />
               <files>
                 <folder source="DPF" destination="" />
               </files>
