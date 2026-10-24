@@ -149,7 +149,7 @@ Chosen for you when Frostfall (Frostfall.esp) is in your load order. Install thi
  - Stop On Slash: hit stop and screen shake.
  - Elden Counter: the guard counter window after a block (the counter animations stay a separate download).
  - Elden Parry: a bash while an attack lands is a parry; projectiles are deflected. A Parry system setting picks Elden Parry, Parry for All, or off, so two parry systems never fight.
-Also built in: the Backstab Bug Fix, a light ESL ValhallaCombat.esp (no MCM Helper, no Papyrus), and a settings menu in SKSE Menu Framework (Settings.ini in SKSE\Plugins\ValhallaCombat). Stun defaults are raised so executions trigger on higher difficulties.
+Also built in: a light ESL ValhallaCombat.esp (no MCM Helper, no Papyrus), and a settings menu in SKSE Menu Framework (Settings.ini in SKSE\Plugins\ValhallaCombat). Stun defaults are raised so executions trigger on higher difficulties.
 
 REQUIRES (install these first)
  - Valhalla Combat (main file, for its meshes, sounds and textures): https://www.nexusmods.com/skyrimspecialedition/mods/64741
@@ -163,12 +163,12 @@ RECOMMENDED
  - Elden Counter (counter animations; do NOT use its DLL): https://www.nexusmods.com/skyrimspecialedition/mods/65579 (needs Animation Motion Revolution https://www.nexusmods.com/skyrimspecialedition/mods/50258, Payload Interpreter https://www.nexusmods.com/skyrimspecialedition/mods/65089 and Open Animation Replacer https://www.nexusmods.com/skyrimspecialedition/mods/92109)
  - SHD and 2HM parry animation, for the parry: https://www.nexusmods.com/skyrimspecialedition/mods/83526
  - BFCO Elden Parry Precision Patch, if you use BFCO: https://www.nexusmods.com/skyrimspecialedition/mods/119938
+ - Valhalla Combat - Backstab Bug Fix (it fixes the backstab kill move that does not kill; not included, install it after this part): https://www.nexusmods.com/skyrimspecialedition/mods/97195
  - BFCO Jump Attack Stamina Cost for Valhalla Combat, if you use BFCO: https://www.nexusmods.com/skyrimspecialedition/mods/192008
  - Parry for All instead of Elden Parry (needs the DPF part below): https://www.nexusmods.com/skyrimspecialedition/mods/167873
 
 REMOVE (the new build already contains them)
  - Valhalla Combat DLL Patch for 1170 / 1799 / 17104 (Nexus 190197)
- - Valhalla Combat - Backstab Bug Fix (Nexus 97195)
  - The DLLs of Stop On Slash, Elden Parry and Elden Counter (Nexus 66155, 70240, 65579). Keep the Elden Counter animations and plugin.
  - Shield of Stamina (Valhalla Combat includes it)
 

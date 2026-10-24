@@ -25,7 +25,7 @@ Features of other mods by the same author (dTry) that are built into the Valhall
   Stop On Slash (Nexus 66155, https://github.com/D7ry/StopOnSlash), Elden Counter (Nexus 65579, https://github.com/D7ry/EldenCounter) and Elden Parry
   (Nexus 70240, https://github.com/D7ry/EldenParry). Their public repositories carry no license file, so that statement is the permission. The animations and
   plugin of Elden Counter, and the animations of Elden Parry, are NOT included; they stay separate Nexus downloads (see the requirements on the mod page).
-The Backstab Bug Fix by Moonling (Nexus 97195) is built into ValhallaCombat.esp (the conditions and related idles of the two kill move idle records).
+The Backstab Bug Fix by Moonling (Nexus 97195) is NOT included; it stays a separate recommended mod.
 Valhalla Combat's own meshes, sounds, textures and translations are NOT included: the original Valhalla Combat (Nexus 64741) must be installed first.
 src/include/lib/SKSEMenuFramework.h is the SKSE Menu Framework SDK header by Thiago (Nexus 120352), used unmodified; the header is not part of this download.
 

@@ -56,6 +56,7 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 [*][url=https://www.nexusmods.com/skyrimspecialedition/mods/184932]Valhalla Combat AIO Patch[/url] - race mapping for modded creatures, so stun, stagger and executions work on them
 [*][url=https://www.nexusmods.com/skyrimspecialedition/mods/65579]Elden Counter[/url] - the counter animations and plugin. [b]Do not use its DLL[/b]: the guard counter is built into Valhalla Combat. It needs [url=https://www.nexusmods.com/skyrimspecialedition/mods/50258]Animation Motion Revolution[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/65089]Payload Interpreter[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/92109]Open Animation Replacer[/url]
 [*][url=https://www.nexusmods.com/skyrimspecialedition/mods/83526]SHD and 2HM parry animation[/url] - shield and greatsword bash animations made for the parry
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/97195]Valhalla Combat - Backstab Bug Fix[/url] by Moonling - fixes the backstab kill move that does not kill. Not included: install it after this part
 [*][url=https://www.nexusmods.com/skyrimspecialedition/mods/119938]BFCO Elden Parry Precision Patch[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/192008]BFCO Jump Attack Stamina Cost for Valhalla Combat[/url] - if you use BFCO
 [*][url=https://www.nexusmods.com/skyrimspecialedition/mods/167873]Parry for All[/url] - NPCs and the player parry with the block. Use it [i]instead of[/i] Elden Parry (see below). It needs [url=https://www.nexusmods.com/skyrimspecialedition/mods/182988]Dynamic Forms Generator[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/78146]Behavior Data Injector[/url], [url=https://www.nexusmods.com/skyrimspecialedition/mods/175848]Notify Events[/url] and [url=https://www.nexusmods.com/skyrimspecialedition/mods/164546]State Behavior Framework[/url]
 [/list]
@@ -65,7 +66,6 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 [size=4][b]Remove these (the new build contains them)[/b][/size]
 [list]
 [*]Valhalla Combat DLL Patch for 1170 / 1799 / 17104 (Nexus 190197)
-[*]Valhalla Combat - Backstab Bug Fix (Nexus 97195)
 [*]The DLLs of Stop On Slash, Elden Parry and Elden Counter (Nexus 66155, 70240, 65579). Keep the Elden Counter animations and plugin.
 [*]Shield of Stamina - Valhalla Combat includes it
 [/list]
@@ -76,7 +76,7 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 [list]
 [*][b]Runs on 1.7.104[/b] (built for 1.6.1170 and newer). The old fixed call sites that broke on 1.7 are found by what they call, and any hook that cannot be placed safely is skipped and written to the log instead of corrupting memory.
 [*][b]One settings menu[/b] in SKSE Menu Framework (Mod Control Panel > Valhalla Combat). No MCM Helper, no Papyrus. The settings are in SKSE\Plugins\ValhallaCombat\Settings.ini.
-[*][b]Light plugin[/b] - an ESL ValhallaCombat.esp with the Backstab Bug Fix inside.
+[*][b]Light plugin[/b] - an ESL ValhallaCombat.esp (no SkyUI or MCM Helper needed).
 [*][b]Stop On Slash[/b] - hit stop and screen shake, per weapon and per attack type (Hit Stop page).
 [*][b]Elden Counter[/b] - block, then power attack inside the counter window. The window length is a slider.
 [*][b]Elden Parry[/b] - a light bash has no hit; a bash while an attack lands is a parry: the attacker is staggered and takes parry stun, arrows and spells are deflected, a power bash is a guard bash. Successful parries cost no stamina.
@@ -129,7 +129,6 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 [list]
 [*][b]dTry (D7ry)[/b] - Valhalla Combat, Stop On Slash, Elden Counter, Elden Parry. Thank you for the open permissions on your mods.
 [*][b]tonycubed2[/b] - Valhalla Combat DLL Patch (the 1.7.x fixes)
-[*][b]Moonling[/b] - Valhalla Combat - Backstab Bug Fix
 [*][b]Tossapon[/b] - Archery Locational Damage
 [*][b]Thiago and Viny[/b] - Dynamic Persistent Forms REthinked; [b]RetiredViny[/b] - Parry for All
 [*][b]Thiago[/b] - SKSE Menu Framework
