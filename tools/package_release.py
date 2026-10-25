@@ -45,6 +45,7 @@ COMBAT = {
         (vc / "release-contents" / "ValhallaCombat.esp", "ValhallaCombat.esp"),
         (vc / "data" / "SKSE/Plugins/ValhallaCombat/Killmoves.ini", "SKSE/Plugins/ValhallaCombat/Killmoves.ini"),
         (vc / "data" / "SKSE/Plugins/ValhallaCombat/RaceMapping/Vanilla.ini", "SKSE/Plugins/ValhallaCombat/RaceMapping/Vanilla.ini"),
+        (vc / "data" / "Interface/ValhallaCombat/vacsa_logo.png", "Interface/ValhallaCombat/vacsa_logo.png"),  # Overview page logo
         (LIC / "ValhallaCombat-BSD-3-Clause.txt", "Licenses/ValhallaCombat-BSD-3-Clause.txt"),
         (LIC / "ValhallaCombat-NOTICE.txt", "Licenses/ValhallaCombat-NOTICE.txt"),
     ],
