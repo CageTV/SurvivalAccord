@@ -11,6 +11,7 @@ VaCSA is a modular FOMOD. You install only the parts you use:
 [list]
 [*][b]Survival Accord[/b] - connects Firmament's Exploration perks to Last Seed 2026 (Hunger, Fatigue, camping) and Frostfall 2026 (cold Exposure).
 [*][b]Valhalla Combat, 1.7 build[/b] - runs on Skyrim 1.7.104, with Stop On Slash, Elden Counter and Elden Parry built in, one settings menu, and a parry system selector.
+[*][b]Valhalla Combat Reborn, 1.7 build[/b] - for people who run [url=https://www.nexusmods.com/skyrimspecialedition/mods/196968]Valhalla Combat Reborn[/url] by MichelKI: only its DLL, made to run on Skyrim 1.7.104. Reborn works as its author made it, nothing of the other build is added. Pick it [i]instead of[/i] the Valhalla Combat 1.7 build.
 [*][b]Archery Locational Damage, 1.7 build[/b] - the same mod, a DLL that runs on 1.7.104 and no longer crashes with Firmament's skill use.
 [*][b]DPF RE, 1.7.104 DLL[/b] - Dynamic Persistent Forms REthinked has no DLL for 1.7.104; this one is needed by Parry for All.
 [/list]
@@ -72,6 +73,13 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 
 [line]
 
+[size=4][b]Valhalla Combat Reborn 1.7 build[/b][/size]
+[list]
+[*]Install Valhalla Combat, then Valhalla Combat Reborn and all of its requirements, then pick this part; install VaCSA [b]below[/b] Reborn so the DLL wins. Precision and TrueHUD are optional: the DLL uses them when they are installed.
+[*]The DLL is built from Reborn's own source (GPL-3.0, [url=https://github.com/CageTV/valhallaCombat-Reborn]valhallaCombat-Reborn[/url]) with only what 1.7.104 needs: hooks are checked before they are written and skipped (and logged) if they do not fit, the melee hit hook is found by the function it calls and chained when another plugin already rewrote that call, hits Precision reports are processed too (without counting one blow twice), skill experience calls use the four arguments the game expects.
+[*]Reborn's behaviour and settings are not changed. Not available for the legacy Skyrim versions.
+[/list]
+
 [size=4][b]Valhalla Combat 1.7 build[/b][/size]
 [list]
 [*][b]Runs on 1.7.104[/b] (built for 1.6.1170 and newer). The old fixed call sites that broke on 1.7 are found by what they call, and any hook that cannot be placed safely is skipped and written to the log instead of corrupting memory.
@@ -128,6 +136,7 @@ All the DLLs use Address Library. The installer asks which Skyrim you run: the [
 [size=4][b]Credits[/b][/size]
 [list]
 [*][b]dTry (D7ry)[/b] - Valhalla Combat, Stop On Slash, Elden Counter, Elden Parry. Thank you for the open permissions on your mods.
+[*][b]MichelKI[/b] - Valhalla Combat Reborn (the 1.7 build is made from its source, GPL-3.0).
 [*][b]tonycubed2[/b] - Valhalla Combat DLL Patch (the 1.7.x fixes)
 [*][b]Tossapon[/b] - Archery Locational Damage
 [*][b]Thiago and Viny[/b] - Dynamic Persistent Forms REthinked; [b]RetiredViny[/b] - Parry for All
