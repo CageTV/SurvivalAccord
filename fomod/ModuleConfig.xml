@@ -141,10 +141,10 @@ Chosen for you when Frostfall (Frostfall.esp) is in your load order. Install thi
 
     <installStep name="Combat">
       <optionalFileGroups order="Explicit">
-        <group name="Combat parts" type="SelectAny">
+        <group name="Valhalla Combat - pick the one you run" type="SelectAtMostOne">
           <plugins order="Explicit">
 
-            <plugin name="Valhalla Combat - 1.7 build with Stop On Slash, Elden Counter and Elden Parry built in">
+            <plugin name="Valhalla Combat (original) - 1.7 build with Stop On Slash, Elden Counter and Elden Parry built in">
               <description>Replaces Valhalla Combat's plugin and DLL with a build that runs on Skyrim 1.7.104 (current build: 1.6.1170 and newer; a legacy build for SE 1.5.97 and AE before 1.6.1170 is installed when you pick it on the version page, NOT tested), and adds three of dTry's mods as built-in features:
  - Stop On Slash: hit stop and screen shake.
  - Elden Counter: the guard counter window after a block (the counter animations stay a separate download).
@@ -186,6 +186,12 @@ Tested on a save that already used Valhalla Combat. Chosen for you when Valhalla
                   <patterns>
                     <pattern>
                       <dependencies>
+                        <fileDependency file="SKSE/Plugins/ValhallaCombat/Poise.ini" state="Active" />
+                      </dependencies>
+                      <type name="Optional" />
+                    </pattern>
+                    <pattern>
+                      <dependencies>
                         <fileDependency file="ValhallaCombat.esp" state="Active" />
                       </dependencies>
                       <type name="Recommended" />
@@ -194,6 +200,59 @@ Tested on a save that already used Valhalla Combat. Chosen for you when Valhalla
                 </dependencyType>
               </typeDescriptor>
             </plugin>
+
+            <plugin name="Valhalla Combat Reborn - 1.7 build (the DLL of Reborn, made to run on Skyrim 1.7.104)">
+              <description>For people who run Valhalla Combat Reborn by MichelKI (Nexus 196968), a complete rework of Valhalla Combat. Replaces only Reborn's DLL with a build of Reborn's own source that runs on Skyrim 1.7.104 (current build: 1.6.1170 and newer). Reborn's behaviour and settings are left exactly as its author made them: stamina, block, parry, poise, AI, perks and special attacks all work as in Reborn, and its MCM stays its menu.
+
+What is different from Reborn's own DLL (only what 1.7.104 needs):
+ - Every hook that writes into the game code first checks that the place really is a call; one that does not fit is skipped and written to the log instead of corrupting memory.
+ - The melee hit hook is found by the function it calls, and is attached as a chain when another plugin (Precision, an impact framework) already rewrote that call, so both keep working.
+ - Hits that Precision reports are also processed (a Precision post-hit callback), without counting one blow twice.
+ - Skill experience calls use the four arguments the 1.7 game expects.
+Nothing of the other build is added: no Stop On Slash, no Elden Counter, no settings page, no parry selector.
+
+REQUIRES (install these first, in this order)
+ - Valhalla Combat (main file, for its meshes, sounds and textures): https://www.nexusmods.com/skyrimspecialedition/mods/64741
+ - Valhalla Combat Reborn and ALL of its requirements: https://www.nexusmods.com/skyrimspecialedition/mods/196968 (Behavior Data Injector and its universal support file, SPID; optional: (SBF) State Behavior Framework, MBO - Modern Bash Overhaul, SkyPatcher)
+ - Precision and TrueHUD are optional: the DLL uses them when they are installed (stun meter, collisions) and works without them.
+
+Install this part below Valhalla Combat Reborn in your load order, so its DLL wins. Do not pick it together with the other Valhalla Combat build. It cannot be used with the legacy Skyrim versions.
+
+Source code (GPL-3.0): https://github.com/CageTV/valhallaCombat-Reborn. Original work by dTry (D7ry) and MichelKI; see Valhalla Combat Reborn/Licenses in this download.
+Chosen for you when Valhalla Combat Reborn is in your load order.</description>
+              <image path="fomod/images/logo-square.png" />
+              <conditionFlags>
+                <flag name="vcr">on</flag>
+              </conditionFlags>
+              <files>
+                <folder source="Valhalla Combat Reborn" destination="" />
+              </files>
+              <typeDescriptor>
+                <dependencyType>
+                  <defaultType name="Optional" />
+                  <patterns>
+                    <pattern>
+                      <dependencies>
+                        <flagDependency flag="version" value="legacy" />
+                      </dependencies>
+                      <type name="NotUsable" />
+                    </pattern>
+                    <pattern>
+                      <dependencies>
+                        <fileDependency file="SKSE/Plugins/ValhallaCombat/Poise.ini" state="Active" />
+                      </dependencies>
+                      <type name="Recommended" />
+                    </pattern>
+                  </patterns>
+                </dependencyType>
+              </typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+
+        <group name="Combat parts" type="SelectAny">
+          <plugins order="Explicit">
+
 
             <plugin name="Archery Locational Damage - 1.7 build">
               <description>Replaces Archery Locational Damage's DLL with a build that runs on Skyrim 1.7.104 (built for 1.6.1170 and newer). It fixes the crashes with Firmament's skill use and uses Address Library everywhere. The settings (INI presets) stay Archery Locational Damage's own.
@@ -307,6 +366,13 @@ Chosen for you when DPF (DPF.esp) is in your load order.</description>
           <flagDependency flag="vc" value="on" />
         </dependencies>
         <files><folder source="Legacy/ValhallaCombat" destination="" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="version" value="current" />
+          <flagDependency flag="vcr" value="on" />
+        </dependencies>
+        <files><folder source="Current/ValhallaCombatReborn" destination="" /></files>
       </pattern>
       <pattern>
         <dependencies operator="And">

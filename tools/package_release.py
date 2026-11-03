@@ -12,6 +12,7 @@ Zip layout (the folder names are the ones fomod/ModuleConfig.xml installs from):
     Current/<part>/SKSE/Plugins/*.dll (SurvivalAccord, ValhallaCombat, ArcheryLocationalDamage, DPF), Legacy/<part>/... (SurvivalAccord, ValhallaCombat)
     Last Seed/Scripts/*.pex (+ Source), Frostfall/Scripts/_Frost_ExposureSystem.pex (+ Source)
     Valhalla Combat/ValhallaCombat.esp, SKSE/Plugins/ValhallaCombat/Killmoves.ini, RaceMapping/Vanilla.ini, Licenses/*
+    Valhalla Combat Reborn/Licenses/* (the DLL is Current/ValhallaCombatReborn/SKSE/Plugins/ValhallaCombat.dll)
     Archery Locational Damage/Licenses/*, DPF/Licenses/*
 """
 import re
@@ -49,6 +50,10 @@ COMBAT = {
         (LIC / "ValhallaCombat-BSD-3-Clause.txt", "Licenses/ValhallaCombat-BSD-3-Clause.txt"),
         (LIC / "ValhallaCombat-NOTICE.txt", "Licenses/ValhallaCombat-NOTICE.txt"),
     ],
+    "Valhalla Combat Reborn": [
+        (LIC / "ValhallaCombatReborn-NOTICE.txt", "Licenses/ValhallaCombatReborn-NOTICE.txt"),
+        (LIC / "ValhallaCombatReborn-MIT-d7ry.txt", "Licenses/ValhallaCombatReborn-MIT-d7ry.txt"),
+    ],
     "Archery Locational Damage": [
         (LIC / "ArcheryLocationalDamage-MIT.txt", "Licenses/ArcheryLocationalDamage-MIT.txt"),
         (LIC / "ArcheryLocationalDamage-NOTICE.txt", "Licenses/ArcheryLocationalDamage-NOTICE.txt"),
@@ -60,6 +65,7 @@ COMBAT = {
     "Legacy/SurvivalAccord": [(LEGACY_SA, "SKSE/Plugins/SurvivalAccord.dll")],
     "Current/ValhallaCombat": [(out_dir / "ValhallaCombat" / "ValhallaCombat.dll", "SKSE/Plugins/ValhallaCombat.dll")],
     "Legacy/ValhallaCombat": [(LEGACY_VC, "SKSE/Plugins/ValhallaCombat.dll")],
+    "Current/ValhallaCombatReborn": [(out_dir / "ValhallaCombatReborn" / "ValhallaCombat.dll", "SKSE/Plugins/ValhallaCombat.dll")],  # Reborn's source on 1.7.104 (repo valhallaCombat-Reborn, branch ng-17x)
     "Current/ArcheryLocationalDamage": [(out_dir / "ArcheryLocationalDamage" / "ArcheryLocationalDamage.dll", "SKSE/Plugins/ArcheryLocationalDamage.dll")],
     "Current/DPF": [(out_dir / "DPF" / "DPF.dll", "SKSE/Plugins/DPF.dll")],
 }
